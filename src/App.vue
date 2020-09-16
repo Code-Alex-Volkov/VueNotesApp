@@ -1,28 +1,36 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+  data() {
+    return {
+      title: "Notes App",
+      note: {
+        title: "",
+        descr: "",
+      },
+      notes: [
+        {
+          title: "First title note",
+          descr: "First description note",
+          date: new Date(Date.now()).toLocaleDateString(),
+        },
+        {
+          title: "Second title note",
+          descr: "Second description note",
+          date: new Date(Date.now()).toLocaleDateString(),
+        },
+        {
+          title: "Third title note",
+          descr: "Third description note",
+          date: new Date(Date.now()).toLocaleDateString(),
+        },
+      ],
+    };
+  },
+};
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
